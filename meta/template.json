@@ -1,0 +1,152 @@
+{
+    "id": "4367",
+    "name": "E-book",
+    "mobile": true,
+    "notes": "Largest breakpoint at 1278px allows for content space of 1148px",
+    "syntax": 4,
+    "version": 1.04,
+    "style": {
+        "replacements": [
+            {"type":"font", "find": "'Open Sans'", "name": "Font"},
+            {"type":"font", "find": "'Open Sans Condensed'", "name": "Font (Title & Button)"},
+            {"type":"font", "find": "'PT Sans'", "name": "Font (Payment)"},
+
+            {"type": "color", "find": "#6279ff", "name": "Link Color"},
+            {"type": "color", "find": "#ff521b", "name": "Link Hover Color"},
+            {"type": "color", "find": "#fffffe", "name": "Button Text"},
+            {"type": "color", "find": "#ff521a", "name": "Button Text (Hover)"},
+            {"type": "color", "find": "#ff521c", "name": "Button"},
+
+            {"type": "color", "find": "#020122", "name": "Header Background"},
+            {"type": "color", "find": "#ff521d", "name": "Content Title"},
+            {"type": "color", "find": "#6279fe", "name": "Content List Marker"},
+            {"type": "color", "find": "#ff521e", "name": "Filled Stars"},
+            {"type": "color", "find": "#e1e1e1", "name": "Divider"},
+
+            {"type": "color", "find": "#fffffc", "name": "Content Background (1 & 3)"},
+            {"type": "color", "find": "#000001", "name": "Content Text (1 & 3)"},
+
+            {"type": "color", "find": "#020123", "name": "Content Background (2 & 4)"},
+            {"type": "color", "find": "#fffeff", "name": "Content Text (2 & 4)"},
+
+            {"type": "color", "find": "#feffff", "name": "Footer Background"}
+
+        ]
+    },
+    "variables": {
+        "facebookCommentsURL": {
+          "variable": "facebookCommentsURL",
+          "dafault": "http://leadpages.net",
+          "name": "The URL to read and write comments on Facebook."
+        },
+        "facebookShareURL": {
+            "variable": "facebookShareURL",
+            "dafault": "",
+            "name": "The URL to share on Facebook. Leave blank to share the current page."
+        },
+        "twitterShareURL": {
+            "variable": "twitterShareURL",
+            "dafault": "",
+            "name": "The URL to share on Twitter. Leave blank to share the current page."
+        },
+        "googleShareURL": {
+            "variable": "googleShareURL",
+            "dafault": "",
+            "name": "The URL to share on Google+. Leave blank to share the current page."
+        },
+        "linkedInShareURL": {
+            "variable": "linkedInShareURL",
+            "dafault": "",
+            "name": "The URL to share on LinkedIn. Leave blank to share the current page."
+        }
+    },
+    "elements": [
+        {"id": "header", "name": "Header", "type": "container"},
+        {"id": "logo", "name": "Image", "type": "image", "data": { "max-width": 127 } },
+
+        {"id": "social", "name": "Social Media", "type": "container"},
+        {"id": "twitter", "type": "dynamic", "name": "Twitter Share", "data": { "variables": ["twitterShareURL"] } },
+        {"id": "facebook", "type": "dynamic", "name": "Facebook Share", "data": { "variables": ["facebookShareURL"] } },
+        {"id": "google", "type": "dynamic", "name": "Google+ Share", "data": { "variables": ["googleShareURL"] } },
+        {"id": "linkedin", "type": "dynamic", "name": "LinkedIn Share", "data": { "variables": ["linkedInShareURL"] } },
+
+        {"id": "content-1", "name": "Content #1", "type": "container"},
+        {"id": "content-1-left", "name": "Left", "type": "container"},
+        {"id": "content-1-title", "name": "Title", "type": "text"},
+        {"id": "content-1-subtitle", "name": "Subtitle", "type": "text"},
+        {"id": "content-1-text", "name": "Text", "type": "text"},
+        {"id": "content-1-list", "name": "List", "type": "text"},
+        {"id": "content-1-right", "name": "Right", "type": "container"},
+        {"id": "content-1-image", "name": "Image", "type": "image", "data": { "max-width": 229 } },
+        {"id": "content-1-payment", "name": "Payment", "type": "container"},
+        {"id": "content-1-payment-button", "name": "Button", "type": "link", "data": {"href": "#/optin"} },
+        {"id": "content-1-payment-lock", "name": "Lock", "type": "image", "data": { "max-width": 21 } },
+        {"id": "content-1-payment-text", "name": "Text", "type": "text"},
+        {"id": "content-1-payment-option-1", "name": "Option #1", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-1-payment-option-2", "name": "Option #2", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-1-payment-option-3", "name": "Option #3", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-1-payment-option-4", "name": "Option #4", "type": "image", "data": { "max-width": 32 } },
+
+        {"id": "content-2", "name": "Content #2", "type": "container"},
+        {"id": "content-2-title", "name": "Title", "type": "text"},
+        {"id": "content-2-text", "name": "Text", "type": "text"},
+        {"id": "content-2-payment", "name": "Payment", "type": "container"},
+        {"id": "content-2-payment-button", "name": "Button", "type": "link", "data": {"href": "#/optin"} },
+        {"id": "content-2-payment-lock", "name": "Lock", "type": "image", "data": { "max-width": 21 } },
+        {"id": "content-2-payment-text", "name": "Text", "type": "text"},
+        {"id": "content-2-payment-option-1", "name": "Option #1", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-2-payment-option-2", "name": "Option #2", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-2-payment-option-3", "name": "Option #3", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-2-payment-option-4", "name": "Option #4", "type": "image", "data": { "max-width": 32 } },
+
+        {"id": "content-3", "name": "Content #3", "type": "container"},
+        {"id": "content-3-left", "name": "Left", "type": "container"},
+        {"id": "content-3-title-1", "name": "Title", "type": "text"},
+        {"id": "video-container", "name": "Video Container", "type": "container"},
+        {"id": "video", "name": "Video", "type": "video"},
+        {"id": "content-3-text", "name": "Text", "type": "text"},
+        {"id": "content-3-right", "name": "Right", "type": "container"},
+        {"id": "content-3-title-2", "name": "Title", "type": "text"},
+        {"id": "content-3-review-1", "name": "Review #1", "type": "container"},
+        {"id": "content-3-review-1-stars", "name": "Stars", "type": "container"},
+        {"id": "content-3-review-1-star-1", "name": "Star 1", "type": "container"},
+        {"id": "content-3-review-1-star-2", "name": "Star 2", "type": "container"},
+        {"id": "content-3-review-1-star-3", "name": "Star 3", "type": "container"},
+        {"id": "content-3-review-1-star-4", "name": "Star 4", "type": "container"},
+        {"id": "content-3-review-1-star-5", "name": "Star 5", "type": "container"},
+        {"id": "content-3-review-1-text", "name": "Text", "type": "text"},
+        {"id": "content-3-review-1-author", "name": "Author", "type": "text"},
+        {"id": "content-3-review-1-occupation", "name": "Author Occupation", "type": "text"},
+        {"id": "content-3-divider", "name": "Divider", "type": "container"},
+        {"id": "content-3-review-2", "name": "Review #2", "type": "container"},
+        {"id": "content-3-review-2-stars", "name": "Stars", "type": "container"},
+        {"id": "content-3-review-2-star-1", "name": "Star 1", "type": "container"},
+        {"id": "content-3-review-2-star-2", "name": "Star 2", "type": "container"},
+        {"id": "content-3-review-2-star-3", "name": "Star 3", "type": "container"},
+        {"id": "content-3-review-2-star-4", "name": "Star 4", "type": "container"},
+        {"id": "content-3-review-2-star-5", "name": "Star 5", "type": "container"},
+        {"id": "content-3-review-2-text", "name": "Text", "type": "text"},
+        {"id": "content-3-review-2-author", "name": "Author", "type": "text"},
+        {"id": "content-3-review-2-occupation", "name": "Author Occupation", "type": "text"},
+
+        {"id": "content-4", "name": "Content #4", "type": "container"},
+        {"id": "content-4-left", "name": "Left", "type": "container"},
+        {"id": "content-4-title", "name": "Title", "type": "text"},
+        {"id": "content-4-text", "name": "Text", "type": "text"},
+        {"id": "content-4-payment", "name": "Payment", "type": "container"},
+        {"id": "content-4-payment-button", "name": "Button", "type": "link", "data": {"href": "#/optin"} },
+        {"id": "content-4-payment-lock", "name": "Lock", "type": "image", "data": { "max-width": 21 } },
+        {"id": "content-4-payment-text", "name": "Text", "type": "text"},
+        {"id": "content-4-payment-option-1", "name": "Option #1", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-4-payment-option-2", "name": "Option #2", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-4-payment-option-3", "name": "Option #3", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-4-payment-option-4", "name": "Option #4", "type": "image", "data": { "max-width": 32 } },
+        {"id": "content-4-right", "name": "Right", "type": "container"},
+        {"id": "content-4-image", "name": "Image", "type": "image", "data": { "max-width": 281 } },
+
+        {"id": "footer", "name": "Footer", "type": "container"},
+        {"id": "copyright-text", "name": "Text", "type": "text"}
+
+    ],
+    "form": {}
+}
